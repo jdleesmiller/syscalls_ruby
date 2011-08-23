@@ -19,7 +19,7 @@ the gem is built.
 == REQUIREMENTS
 
 Tested on:
-* Debian Squeeze 2.6.32-5-686 i686 GNU/Linux
+* ruby 1.9.2p290 (2011-07-09 revision 32553) [i686-linux] (Debian squeeze)
 
 == INSTALLATION
 
