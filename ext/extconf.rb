@@ -23,7 +23,7 @@ raise "cannot find sys/syscall.h" unless have_header('sys/syscall.h')
 conf = RbConfig::CONFIG.merge('hdrdir' => $hdrdir.quote,
                               'srcdir' => $srcdir.quote,
                               'arch_hdrdir' => "#$arch_hdrdir",
-                              'top_srcdir' => $top_srcdir.quote)
+                              'top_srcdir' => ($top_srcdir || '').quote)
 cmd = RbConfig::expand(
   "$(CC) #$INCFLAGS #$CPPFLAGS #$CFLAGS #$ARCH_FLAG -E -dD -", conf)
 lines = IO.popen(cmd, 'r+') {|io|

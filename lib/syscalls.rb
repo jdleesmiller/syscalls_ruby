@@ -14,7 +14,8 @@ module Syscalls
   #
   # Hash from system call names (as symbols) to system call numbers.
   #
-  SYS_NUMBER = Hash[self.constants.grep(/SYS_/).map{|c| [c, self.const_get(c)]}]
+  SYS_NUMBER = Hash[self.constants.grep(/SYS_/).map{|c|
+    [c.to_sym, self.const_get(c)]}]
 
   #
   # Hash from system call numbers to system call names (as symbols).
