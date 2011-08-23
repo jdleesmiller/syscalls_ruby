@@ -10,7 +10,7 @@ task :ext do
 end
 
 task :build do
-  sh "gem build ptrace.gemspec"
+  sh "gem build *.gemspec"
   sh "mkdir -p pkg; mv *.gem pkg"
 end
 

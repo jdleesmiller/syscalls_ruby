@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.email             = ['jdleesmiller@gmail.com']
   s.homepage          = 'https://github.com/jdleesmiller/syscalls_ruby'
   s.summary           = %q{Constants for syscall numbers}
-  s.description       = %q{Constants for syscall numbers}
+  s.description       = %q{An extension that lists the system's supported syscalls (e.g. SYS_open, SYS_write, etc.)}
 
   s.rubyforge_project = ''
 
