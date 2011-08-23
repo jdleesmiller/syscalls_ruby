@@ -8,6 +8,9 @@ An extension that lists the system's supported syscalls (e.g. SYS_open,
 SYS_write, etc.)}. These are read from <tt>sys/syscall.h</tt> when the gem is
 built.
 
+So far this has been tested on a couple of Linux machines; it should in
+principle work on other *nixes, but I haven't tested it.
+
 === Usage
 
   require 'rubygems'
