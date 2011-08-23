@@ -5,7 +5,6 @@ class TestSyscalls < Test::Unit::TestCase
   include Syscalls
 
   def test_syscalls
-    p SYS_NUMBER
     assert_equal SYS_open, SYS_NUMBER[:SYS_open]
     assert_equal :SYS_open, SYS_NAME[SYS_open]
   end
