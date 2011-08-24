@@ -5,7 +5,7 @@
 == SYNOPSIS
 
 An extension that lists the system's supported syscalls (e.g. SYS_open,
-SYS_write, etc.)}. These are read from <tt>sys/syscall.h</tt> when the gem is
+SYS_write, etc.). These are read from <tt>sys/syscall.h</tt> when the gem is
 built.
 
 So far this has been tested on a couple of Linux machines; it should in
@@ -30,6 +30,15 @@ Tested on:
 == INSTALLATION
 
   sudo gem install syscalls
+
+== HISTORY
+
+<em>1.0.0</em>
+* added a copy of <tt>Kernel.syscall</tt>, which is going away (according to a
+  warning that it gives in 1.9.2-p290).
+
+<em>0.0.1</em>
+* initial release
 
 == LICENSE
 
