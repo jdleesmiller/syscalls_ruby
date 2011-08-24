@@ -43,10 +43,13 @@ File.open('syscalls.c', 'w') do |f|
 #include <ruby.h>
 #include <sys/syscall.h>
 
+#include "syscall_wrapper.inc"
+
 void
 Init_syscalls(void)
 {
     VALUE mod = rb_define_module("Syscalls");
+    rb_define_singleton_method(mod, "syscall", syscalls_syscall, -1);
 <% syscall_names.each do |name| %>
     rb_define_const(mod, "<%= name %>", INT2FIX(<%= name %>));
 <% end %>

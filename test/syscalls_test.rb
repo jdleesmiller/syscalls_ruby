@@ -10,7 +10,7 @@ class TestSyscalls < Test::Unit::TestCase
   end
 
   def test_getpid
-    assert_equal Process.pid, syscall(SYS_getpid)
+    assert_equal Process.pid, Syscalls.syscall(SYS_getpid)
   end
 end
 
