@@ -1,4 +1,4 @@
-require 'syscalls.so'
+require 'syscalls/extension'
 require 'syscalls/version'
 
 #

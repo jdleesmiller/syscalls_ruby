@@ -3,7 +3,7 @@ require 'rake/clean'
 
 desc 'build extension'
 task :ext do
-  Dir.chdir('ext') do
+  Dir.chdir('ext/syscalls') do
     ruby "extconf.rb"
     sh "make"
   end
@@ -19,9 +19,9 @@ Rake::TestTask.new(:test) do |t|
   t.pattern = 'test/**/*_test.rb'
 end
 
-CLEAN.include('ext/*{.o,.log,.c}')
-CLEAN.include('ext/Makefile')
-CLOBBER.include('ext/*.so')
+CLEAN.include('ext/**/*{.o,.log,.c}')
+CLEAN.include('ext/**/Makefile')
+CLOBBER.include('ext/**/*.so')
 CLOBBER.include('pkg')
 
 task :default => :test

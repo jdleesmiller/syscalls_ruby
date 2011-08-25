@@ -16,10 +16,11 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = ''
 
-  s.files       = Dir.glob('{lib}/**/*.rb') + %w(README.rdoc)
+  s.files       = Dir.glob('lib/**/*.rb') +
+                  Dir.glob('ext/**/*.inc') + %w(README.rdoc)
   s.test_files  = Dir.glob('test/*_test.rb')
 
-  s.extensions = "ext/extconf.rb"
+  s.extensions = "ext/syscalls/extconf.rb"
   s.require_paths << 'ext'
 
   s.rdoc_options = [
