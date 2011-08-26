@@ -19,9 +19,7 @@ Gem::Specification.new do |s|
   s.files       = Dir.glob('lib/**/*.rb') +
                   Dir.glob('ext/**/*.inc') + %w(README.rdoc)
   s.test_files  = Dir.glob('test/*_test.rb')
-
-  s.extensions = "ext/syscalls/extconf.rb"
-  s.require_paths << 'ext'
+  s.extensions = ["ext/syscalls/extconf.rb"]
 
   s.rdoc_options = [
     "--main",    "README.rdoc",
