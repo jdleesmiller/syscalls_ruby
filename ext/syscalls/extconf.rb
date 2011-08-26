@@ -58,4 +58,4 @@ EOF
   f.puts template.result(binding)
 end
 
-create_makefile('syscalls')
+create_makefile('syscalls/syscalls')
